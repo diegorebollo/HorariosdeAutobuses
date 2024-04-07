@@ -1,0 +1,11 @@
+<form>
+  <app-search-input-field
+    textEstacion="Origen"
+    (estacion)="changeOrigen($event)"
+  ></app-search-input-field>
+  <app-search-input-field
+    textEstacion="Destino"
+    (estacion)="changeDesitino($event)"
+  ></app-search-input-field>
+  <button (click)="onSubmit($event)">Buscar</button>
+</form>

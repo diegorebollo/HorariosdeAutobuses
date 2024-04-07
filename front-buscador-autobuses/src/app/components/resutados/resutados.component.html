@@ -1,0 +1,58 @@
+<!-- <div class="ruta">
+  <h3>Salida</h3>
+  <h3>Llegada</h3>
+  <h3>Distancia</h3>
+  <h3>Periodicidad</h3>
+  <h3>Empresa</h3>
+  <h3>Servicio</h3>
+</div> -->
+<!-- <p *ngFor="let estacion of this.rutaData">{{ estacion.salida }}</p> -->
+
+<div class="table_component">
+  <h3 class="back"><a href="/">⬅</a></h3>
+  <h2 class="remove-top-margin">{{ rutaEstacionOrigen.name }}</h2>
+  <h3>↓</h3>
+  <h2>{{ rutaEstacionDestino.name }}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Salida</th>
+        <th>Llegada</th>
+        <th>Distancia</th>
+        <th>Empresa</th>
+        <th>Servicio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let estacion of this.rutaData">
+        <td>{{ estacion.salida }}</td>
+        <td>{{ estacion.llegada }}</td>
+        <td>{{ estacion.distancia }} Kms</td>
+        <td>{{ estacion.empresa }}</td>
+        <td class="dias">
+          <div [ngClass]="estacion.periodicidad[0].data[0] ? 'true' : 'false'">
+            L
+          </div>
+          <div [ngClass]="estacion.periodicidad[0].data[1] ? 'true' : 'false'">
+            M
+          </div>
+          <div [ngClass]="estacion.periodicidad[0].data[2] ? 'true' : 'false'">
+            X
+          </div>
+          <div [ngClass]="estacion.periodicidad[0].data[3] ? 'true' : 'false'">
+            J
+          </div>
+          <div [ngClass]="estacion.periodicidad[0].data[4] ? 'true' : 'false'">
+            V
+          </div>
+          <div [ngClass]="estacion.periodicidad[0].data[5] ? 'true' : 'false'">
+            S
+          </div>
+          <div [ngClass]="estacion.periodicidad[0].data[6] ? 'true' : 'false'">
+            D
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

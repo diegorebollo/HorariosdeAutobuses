@@ -1,0 +1,16 @@
+<div>
+  <ul>
+    <ng-container *ngFor="let estaciones of data; index as i">
+      <li (click)="onClick(estaciones)">{{ estaciones.name }}</li>
+
+      <!-- <li
+      [ngStyle]="{
+        'background-color': i == hoverIndex ? '#233658' : 'white',
+        color: i == hoverIndex ? 'white' : '#233658'
+      }"
+    >
+      {{ estaciones.name }}
+    </li> -->
+    </ng-container>
+  </ul>
+</div>

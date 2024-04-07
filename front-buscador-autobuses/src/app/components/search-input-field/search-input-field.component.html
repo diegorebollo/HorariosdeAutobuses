@@ -1,0 +1,19 @@
+<div>
+  <label>Estación de {{ textEstacion }}</label>
+  <div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <input
+      type="search"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+      placeholder="{{ textEstacion }}"
+      (keydown)="onKeyDown($event)"
+      [formControl]="searchValue"
+    />
+    <app-search-autocomplete
+      *ngIf="enableAutocomplete"
+      [data]="autocompleteData"
+      [hoverIndex]="hoverIndex"
+      (autocompleteEstacion)="changeEstacion($event)"
+    ></app-search-autocomplete>
+  </div>
+</div>

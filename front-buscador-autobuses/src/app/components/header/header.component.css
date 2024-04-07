@@ -1,0 +1,17 @@
+:host{  
+    text-align: center; 
+    width: 100%;
+    margin-top: auto;    
+}
+
+header h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header h2 {
+    color: hsla(238, 55%, 13%, 0.911);    
+    font-size: 1rem;
+    font-weight: 500;
+}
